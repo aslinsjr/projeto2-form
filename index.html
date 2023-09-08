@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Currículo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h3>Cadastre seu Currículo</h3>
+        </div>
+        <div class="form-container">
+            <div class="form-body">
+                <h1 class="form-title">Currículo</h1>
+                <p>Preencha suas informações</p>
+                <form>
+                    <div class="box-input">
+                        <label for="full-name">Nome Completo <span class="required-field">*</span></label>
+                           <input 
+                           type="text" 
+                           name="full-name" 
+                           id="full-name" 
+                           class="block" 
+                           placeholder="Preencha seu nome completo"
+                           minlength="1"
+                           maxlength="30"
+                           required
+                           />
+                    </div>
+                    <div class="box-input-photo">
+                        <label for="photo">Foto<span class="required-field">*</span></label>
+                           <input 
+                           type="file" 
+                           accept="image/png, image/jpg"
+                           id="photo"
+                           name="photo" 
+                           required
+                           />
+                    </div>
+                    <div class="box-input">
+                        <label for="gender">Gênero <span class="required-field">*</span></label>
+                           <select name="gender">
+                            <option value="masculino">Masculino</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="prefiro-nao-responder">Prefiro não responder</option>
+                            </select>
+                    </div>
+                    <div class="box-input">
+                        <label for="birthday">Data de Nascimento<span class="required-field">*</span></label>
+                           <input 
+                           type="date" 
+                           name="birthday" 
+                           id="birthday" 
+                           class="block" 
+                           required
+                           />
+                    </div>
+                    <div class="box-input" id="formation">
+                        <p>Formação Principal</p>
+                        <label for="school">Instituição de Ensino:</label>
+                        <input 
+                           type="text" 
+                           name="school" 
+                           id="school" 
+                           class="block" 
+                           placeholder="Nome da Instituição de Ensino"
+                           minlength="1"
+                           maxlength="30"
+                           required
+                           /><br>
+                           <label for="level">Nível de Formação:</label>
+                           <select name="level">
+                            <option value="ensino-medio">Ensino Médio</option>
+                            <option value="ensino-superior">Ensino Superior</option>
+                            <option value="nivel-tecnico">Nível Técnico</option>
+                            </select>
+                    </div>
+                    <input type="submit" value="Enviar"/>  
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Currículo</title>
+    <!-- Estilos -->
     <link rel="stylesheet" href="style.css">
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mooli&family=Rock+Salt&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
@@ -13,71 +18,186 @@
         </div>
         <div class="form-container">
             <div class="form-body">
-                <h1 class="form-title">Currículo</h1>
-                <p>Preencha suas informações</p>
+                <p class="form-title">Currículo</p>
+                <h3>Preencha suas informações!</h3>
                 <form>
-                    <div class="box-input">
-                        <label for="full-name">Nome Completo <span class="required-field">*</span></label>
-                           <input 
-                           type="text" 
-                           name="full-name" 
-                           id="full-name" 
-                           class="block" 
-                           placeholder="Preencha seu nome completo"
-                           minlength="1"
-                           maxlength="30"
-                           required
-                           />
+                    <div class="personal-container">
+                        <div class="box-input">
+                            <label for="full-name">Nome Completo: <span class="required-field">*</span></label>
+                               <input 
+                               type="text" 
+                               name="full-name" 
+                               id="full-name" 
+                               class="block" 
+                               placeholder="Preencha seu nome completo"
+                               minlength="1"
+                               maxlength="30"
+                               required
+                               />
+                        </div>
+                        <div class="box-input">
+                            <label for="photo">Foto<span class="required-field">*</span></label>
+                               <input 
+                               type="file" 
+                               accept="image/png, image/jpg"
+                               id="photo"
+                               name="photo" 
+                               required
+                               />
+                        </div>
+                        <div class="box-input">
+                            <label for="gender">Gênero <span class="required-field">*</span></label>
+                               <select name="gender">
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                                <option value="prefiro-nao-responder">Prefiro não responder</option>
+                                </select>
+                        </div>
+                        <div class="box-input">
+                            <label for="birthday">Data de Nascimento<span class="required-field">*</span></label>
+                               <input 
+                               type="date" 
+                               name="birthday" 
+                               id="birthday" 
+                               class="block" 
+                               required
+                               />
+                        </div>
                     </div>
-                    <div class="box-input-photo">
-                        <label for="photo">Foto<span class="required-field">*</span></label>
-                           <input 
-                           type="file" 
-                           accept="image/png, image/jpg"
-                           id="photo"
-                           name="photo" 
-                           required
-                           />
-                    </div>
-                    <div class="box-input">
-                        <label for="gender">Gênero <span class="required-field">*</span></label>
-                           <select name="gender">
-                            <option value="masculino">Masculino</option>
-                            <option value="feminino">Feminino</option>
-                            <option value="prefiro-nao-responder">Prefiro não responder</option>
-                            </select>
-                    </div>
-                    <div class="box-input">
-                        <label for="birthday">Data de Nascimento<span class="required-field">*</span></label>
-                           <input 
-                           type="date" 
-                           name="birthday" 
-                           id="birthday" 
-                           class="block" 
-                           required
-                           />
-                    </div>
-                    <div class="box-input" id="formation">
+                    <div class="formation-container">
                         <p>Formação Principal</p>
-                        <label for="school">Instituição de Ensino:</label>
-                        <input 
-                           type="text" 
-                           name="school" 
-                           id="school" 
-                           class="block" 
-                           placeholder="Nome da Instituição de Ensino"
-                           minlength="1"
-                           maxlength="30"
-                           required
-                           /><br>
-                           <label for="level">Nível de Formação:</label>
-                           <select name="level">
-                            <option value="ensino-medio">Ensino Médio</option>
-                            <option value="ensino-superior">Ensino Superior</option>
-                            <option value="nivel-tecnico">Nível Técnico</option>
-                            </select>
+                        <div class="box-input">
+                            <label for="school">Instituição de Ensino:<span class="required-field">*</span></label>
+                                <input 
+                                type="text" 
+                                name="school" 
+                                id="school" 
+                                class="block" 
+                                placeholder="Nome da Instituição de Ensino"
+                                minlength="1" maxlength="30" 
+                                required 
+                                />
+                        </div>
+                        <div class="box-input">
+                            <label for="level">Nível de Formação:<span class="required-field">*</span></label>
+                                <select name="level" required>
+                                <option value="ensino-medio">Ensino Médio</option>
+                                <option value="ensino-superior">Ensino Superior</option>
+                                <option value="nivel-tecnico">Nível Técnico</option>
+                                </select>
+                        </div>
+                        <div class="box-input">
+                            <label for="school">Curso:</label>
+                                <input 
+                                type="text" 
+                                name="course-name" 
+                                id="course-name" 
+                                class="block" 
+                                placeholder="Nome do Curso"
+                                minlength="1" maxlength="30" 
+                                required 
+                                />
+                        </div>
+                        <div class="box-input">
+                            <input 
+                            type="radio"
+                            value="concluido"
+                            name="about-conclusion">
+                            <label for="concluido">Concluido</label>
+                            <input 
+                            type="radio"
+                            value="coursing"
+                            name="about-conclusion">
+                            <label for="cursando">Cursando</label>
+                        </div>
+                        <div class="box-input">
+                            <label for="conclusion-date">Data de Conclusão</label>
+                            <input 
+                            type="date" 
+                            name="conclusion-date" 
+                            id="conclusion-date" 
+                            class="block" 
+                            />
+                        </div>
                     </div>
-                    <input type="submit" value="Enviar"/>  
+                    <div class="experience-container">
+                        <p>Última Experiência Profissional</p>
+                        <div class="box-input">
+                            <label for="school">Local de Trabalho:<span class="required-field">*</span></label>
+                                <input 
+                                type="text" 
+                                name="school" 
+                                id="school" 
+                                class="block" 
+                                placeholder="Nome da instituição"
+                                minlength="1" maxlength="30" 
+                                required 
+                                />
+                        </div>
+                        <div class="box-input">
+                            <label for="job">Cargo:<span class="required-field">*</span></label>
+                                <input 
+                                type="text" 
+                                name="job" 
+                                id="job" 
+                                class="block" 
+                                placeholder="Nome do cargo ocupado"
+                                minlength="1" maxlength="30" 
+                                required 
+                                />
+                        </div>
+                        <div class="box-input">
+                            <label for="assignments">Atividades Exercidas:</label>
+                                <textarea 
+                                name="assignments" 
+                                id="assignments" 
+                                class="block" 
+                                placeholder="Descreva aqui suas atribuíções no local de trabalho"
+                                ></textarea>
+                        </div>
+                        <div class="box-input">
+                            <input 
+                            type="checkbox"
+                            value="meu-emprego-atual"
+                            name="still-in">
+                            <label for="meu-emprego-atual">Meu Emprego Atual</label>
+                        </div>
+                        <div class="box-input">
+                            <label for="conclusion-date">Data de Saída</label>
+                            <input 
+                            type="date" 
+                            name="off-date" 
+                            id="off-date" 
+                            class="block" 
+                            />
+                        </div>
+                    </div>
+                    <div class="skill-container">
+                        <p>Habilidades Extras</p>
+                        <div class="box-input">
+                            <label for="english-skill">Nível de Ingês:</label>
+                                <select name="english-skill">
+                                    <option value="nenhum">Nenhum</option>
+                                    <option value="iniciante">Iniciante</option>
+                                    <option value="intermediario">Intermediário</option>
+                                    <option value="avancado">Avançado</option>
+                                </select>
+                        </div>
+                        <div class="box-input-radio">
+                            <p>Pacote Office</p>
+                            <input 
+                            type="radio"
+                            id="sim"
+                            name="about-office">
+                            <label for="sim">Sim</label>
+                            <input 
+                            type="radio"
+                            id="nao"
+                            name="about-office">
+                            <label for="nao">Não</label>
+                        </div>
+                    </div>
+                    <input type="submit" value="Enviar" class="btn-submit"/>  
                 </form>
             </div>
         </div>
